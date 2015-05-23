@@ -1,4 +1,4 @@
-setwd("~/cwd/data.science/Cleaning/final.proj/UCI HAR Dataset/")
+setwd("~/cwd/final.proj/UCI HAR Dataset/")
 library(dplyr)
 
 # read features names
@@ -48,3 +48,6 @@ for (i in seq(dim(activity)[1])){
 for (i in seq(dim(activity)[1])){
         df.2$labels[ df.2$labels == i ] = act[i]
 }
+
+write.table(df.1,"df.1.txt",row.names = F)
+write.table(df.2,"df.2.txt",row.names = F)
